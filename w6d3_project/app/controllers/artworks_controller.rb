@@ -1,8 +1,17 @@
 class ArtworksController < ApplicationController
 
+    # def index
+    #     debugger
+    #     @artworks = Artwork.all
+    #     render json: @artworks
+    # end
+
+    #new index method for phase 3
     def index
-        @artworks = Artwork.all
-        render json: @artworks
+        artist = User.find(params[:user_id])
+        render json: [artist.artworks, artist.shared_artworks]
+        # puts artist.artworks
+        # puts artist.shared_artworks
     end
 
     def show
@@ -22,8 +31,6 @@ class ArtworksController < ApplicationController
     # def errors_method(artwork)
     #     artwork.errors.full_messages, status: :unprocessable_entity
     # end
-
-
     def update
         @artwork = Artwork.find(params[:id])
         if @artwork.update(artwork_params)
