@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# artist1 = User.create!(username: "Picasso")
+# artist2 = User.create!(username: "Van Go")
+
+artwork1 = ArtWork.create!(title: "Broken Ear Man", image_url: "broken_ear_dude", artist_id: 1)
+artwork2 = ArtWork.create!(title: "Zoom Background", image_url: "space", artist_id: 2)
