@@ -9,5 +9,10 @@
 # artist1 = User.create!(username: "Picasso")
 # artist2 = User.create!(username: "Van Go")
 
-artwork1 = ArtWork.create!(title: "Broken Ear Man", image_url: "broken_ear_dude", artist_id: 1)
-artwork2 = ArtWork.create!(title: "Zoom Background", image_url: "space", artist_id: 2)
+# artist5 = User.create!(username: "Pico")
+# artist6 = User.create!(username: "Va Go")
+
+artwork1 = Artwork.create!(title: "Broken Ear Man", image_url: "broken_ear_dude", artist_id: 1)
+artwork2 = Artwork.create!(title: "Zoom Background", image_url: "space", artist_id: 2)
+
+artwork_share1 = ArtworkShare.create!()

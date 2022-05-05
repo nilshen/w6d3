@@ -1,4 +1,4 @@
-class ArtWork < ApplicationRecord
+class Artwork < ApplicationRecord
     validates :title, uniqueness: { scope: :artist_id }
 
     belongs_to :artist,
