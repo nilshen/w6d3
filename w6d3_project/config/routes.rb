@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 # delete /users/:id(.:format)                   users#destroy
   
   resources :users, only: [:index, :show, :update, :create, :destroy]
-  resources :artwork
-  resources :artworkshare
+  resources :artworks
+  resources :artwork_shares, only: [:index, :create, :destroy]
 
 end
